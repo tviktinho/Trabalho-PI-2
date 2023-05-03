@@ -1,0 +1,62 @@
+/* Estilo do Formulário de Login */
+form[action="login.php"] {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  form[action="login.php"] h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  form[action="login.php"] .form-group label {
+    font-weight: bold;
+  }
+  
+  form[action="login.php"] button[type="submit"] {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Estilo do Formulário de Cadastro */
+  form[action="cadastro.php"] {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  form[action="cadastro.php"] h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  form[action="cadastro.php"] .form-group label {
+    font-weight: bold;
+  }
+  
+  form[action="cadastro.php"] button[type="submit"] {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Estilo Global */
+  .container {
+    margin-top: 50px;
+  }
+  
+  body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+  }
+  

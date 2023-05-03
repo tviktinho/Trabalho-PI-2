@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Formulário de Cadastro -->
+    <script src="script.js"></script>
+    <div class="container mt-4">
+        <h2>Cadastro</h2>
+
+        <form id="cadastro-form" action="cadastro.php" method="post" onsubmit="return validarCadastro()">
+
+            <div class="form-group">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" class="form-control" id="username" placeholder="Digite o nome de usuário"
+                    name="username">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" placeholder="Digite o e-mail" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" class="form-control" id="password" placeholder="Digite a senha" name="password">
+            </div>
+
+            <button id="cadastro-btn" class="btn btn-primary">Cadastrar</button>
+
+        </form>
+    </div>
+</body>
+
+</html>

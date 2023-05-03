@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Loja de Eletrônicos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="container mt-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Loja de Eletrônicos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Página Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_cliente.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-shopping-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-bell"></i> Notificações
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Formulário de Login -->
+        <div class="container">
+            <h2>Login</h2>
+            <form id="login-form" action="login.php" method="post">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Digite o nome de usuário"
+                        name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Digite a senha"
+                        name="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+                <div class="alert alert-danger mt-3" id="login-error" style="display: none;">Nome de usuário ou senha incorretos</div>
+
+            </form>
+        </div>
+
+
+        <!-- Scripts JavaScript do Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script>
+            // Seleciona o formulário de login
+            const form = document.querySelector('#login-form');
+
+            // Adiciona um listener para o evento submit do formulário
+            form.addEventListener('submit', (event) => {
+                // Impede o envio do formulário
+                event.preventDefault();
+
+                // Seleciona os campos de usuário e senha
+                const username = form.querySelector('#username').value;
+                const password = form.querySelector('#password').value;
+
+                // Verifica se os campos estão preenchidos
+                if (!username || !password) {
+                    // Exibe mensagem de erro se algum campo estiver vazio
+                    document.querySelector('#login-error').style.display = 'block';
+                } else {
+                    // Envia o formulário se os campos estiverem preenchidos
+                    form.submit();
+                }
+            });
+        </script>
+
+</body>
+
+</html>
