@@ -1,3 +1,4 @@
+
 <?php
 // Configurações do banco de dados
 $servidor = "localhost";
@@ -21,9 +22,6 @@ if (isset($_POST['buscar'])) {
     // Query para buscar produtos com base no nome ou código
     $sql = "SELECT * FROM produto WHERE nome LIKE '%$busca%' OR codigo LIKE '%$busca%'";
 
-    // Exibe a consulta SQL para depuração
-    echo "Consulta SQL: " . $sql . "<br>";
-
     // Executa a query
     $resultado = mysqli_query($conexao, $sql);
 
@@ -31,14 +29,15 @@ if (isset($_POST['buscar'])) {
     if (mysqli_num_rows($resultado) > 0) {
         // Exibe os resultados
         while ($row = mysqli_fetch_assoc($resultado)) {
-            echo "Nome: " . $row["nome"] . "<br>";
-            echo "Código: " . $row["codigo"] . "<br>";
-            echo "Descrição: " . $row["descricao"] . "<br>";
-            echo "Quantidade: " . $row["quantidade"] . "<br>";
-            echo "<br>";
+            echo '<div class="result-container">';
+            echo '<h3>Nome: ' . $row["nome"] . '</h3>';
+            echo '<p>Código: ' . $row["codigo"] . '</p>';
+            echo '<p>Descrição: ' . $row["descricao"] . '</p>';
+            echo '<p>Quantidade: ' . $row["quantidade"] . '</p>';
+            echo '</div>';
         }
     } else {
-        echo "Nenhum resultado encontrado.";
+        echo '<p class="no-results">Nenhum resultado encontrado.</p>';
     }
 }
 
