@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_produto.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Formulário de Cadastro -->
+    <script src="script_cad_produto.js"></script>
+    <div class="container mt-4">
+        <h2>Buscar Produto</h2>
+
+        <form id="cadastro_produto-form" action="busca_produto.php" method="POST" onsubmit="return validarCadastro()">
+
+            <div class="form-group">
+                <input type="text" name="buscar" placeholder="Digite o nome ou código do produto">
+                <input type="submit" class="btn btn-primary" value="Buscar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
