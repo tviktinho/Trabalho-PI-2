@@ -13,33 +13,91 @@
 </head>
 
 <body>
-    <!-- Formulário de Cadastro -->
-    <script src="script.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="container mt-4">
-        <h2>Cadastro</h2>
-
-        <form id="cadastro-form" action="cadastro.php" method="post" onsubmit="return validarCadastro()">
-
-            <div class="form-group">
-                <label for="username">Nome de Usuário:</label>
-                <input type="text" class="form-control" id="username" placeholder="Digite o nome de usuário"
-                    name="username">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Loja de Eletrônicos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Página Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_cliente.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista_produtos.php">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro_produto.html">Cadastro Produto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="busca_produto.html">Buscar Produto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-shopping-cart"></i> Carrinho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-bell"></i> Notificações
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </nav>
 
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite o e-mail" name="email">
-            </div>
+        <!-- Scripts JavaScript do Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" class="form-control" id="password" placeholder="Digite a senha" name="password">
-            </div>
 
-            <button id="cadastro-btn" class="btn btn-primary">Cadastrar</button>
+        <!-- Formulário de Cadastro -->
+        <script src="script.js"></script>
+        <div class="container mt-4">
+            <h2>Cadastro</h2>
 
-        </form>
-    </div>
+            <form id="cadastro-form" action="cadastro_cliente.php" method="post" onsubmit="return validarCadastro()">
+
+                <div class="form-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Digite o nome de usuário"
+                        name="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Digite o e-mail" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Digite a senha"
+                        name="password">
+                </div>
+
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" class="form-control" id="id" placeholder="Digite o id"
+                        name="id">
+                </div>
+
+                <button id="cadastro-btn" class="btn btn-primary">Cadastrar</button>
+                <input type="button" class="btn btn-primary" value="Limpar" onclick="limparFormulario()">
+            </form>
+        </div>
 </body>
 
 </html>
